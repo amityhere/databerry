@@ -418,7 +418,7 @@ export default function AgentPage() {
               }}
               gap={1}
             >
-              {/* <Box
+              <Box
                 sx={(theme) => ({
                   width: '100%',
                   height: '100%',
@@ -440,7 +440,7 @@ export default function AgentPage() {
                 hasMoreMessages={hasMoreMessages}
                 handleLoadMoreMessages={handleLoadMoreMessages}
                 handleEvalAnswer={handleEvalAnswer}
-              /> */}
+              />
 
               <Stack minWidth={'50%'} maxWidth={'50%'}>
                 {getDatastoreQuery?.data && (

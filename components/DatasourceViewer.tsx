@@ -33,7 +33,8 @@ function DatasourceViewer({ datasourceId }: Props) {
   >(datasourceId ? `/api/datasources/${datasourceId}` : null, fetcher);
 
   const datastoreId = getDatasourceQuery?.data?.datastoreId;
-  const mimeType = (getDatasourceQuery as any)?.data?.config?.type as string;
+  const mimeType = (getDatasourceQuery as any)?.data?.config
+    ?.mime_type as string;
   const datasourceType = getDatasourceQuery?.data?.type;
 
   const searchPluginInstance = searchPlugin();
@@ -91,8 +92,6 @@ function DatasourceViewer({ datasourceId }: Props) {
   // If you don't know the answer, just say that you don't know. Don't try to make up an answer.
   // Always answer in the same language the question is asked in.\n\n
   // Content: ... Question: What are nodes?\n\n\nHelpful Answer:"
-
-  console.log('SEARCH', search);
 
   if (!fileUrl) {
     return null;
